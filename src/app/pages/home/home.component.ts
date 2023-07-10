@@ -12,24 +12,30 @@ export class HomeComponent {
 
   constructor(private renderer: Renderer2) { }
 
+  /**
+   * Método chamado quando um e-mail é selecionado.
+   * @param email O e-mail selecionado.
+   */
   onSelectedEmail(email: any) {
-   
     this.email = email;
   }
 
+  /**
+   * Método chamado quando a lista de e-mails da caixa de entrada é atualizada.
+   * @param listInBox Objeto contendo a lista de e-mails da sessão.
+   */
   onListInbox(listInBox: any) {
-   
     if (this.emails.length < listInBox.session.mails.length) {
       this.showNotification();
     }
-
     this.emails = listInBox.session.mails;
   }
 
+  /**
+   * Envia uma notificação.
+   */
   sendNotification() {
-
     if (this.isNotification) {
-
       if (Notification.permission !== 'granted') {
         Notification.requestPermission().then(permission => {
           if (permission === 'granted') {
@@ -40,9 +46,11 @@ export class HomeComponent {
         this.notificationsActived();
       }
     }
-
   }
 
+  /**
+   * Mostra uma notificação informando sobre um novo e-mail.
+   */
   private showNotification() {
     const options = {
       body: 'Novo e-mail',
@@ -51,12 +59,14 @@ export class HomeComponent {
     const notification = new Notification('Notificação de novo e-mail', options);
   }
 
-  notificationsActived(){
+  /**
+   * Mostra uma notificação informando que as notificações estão ativadas no navegador.
+   */
+  notificationsActived() {
     const options = {
       body: 'Notificações ativadas',
       icon: ''
     };
     const notification = new Notification('Verifique se as notificações estão ativadas em seu navegador.', options);
   }
-
 }

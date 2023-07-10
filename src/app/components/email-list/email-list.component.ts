@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter,OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-email-list',
@@ -7,21 +7,21 @@ import { Component, Input, Output, EventEmitter,OnChanges, SimpleChanges } from 
 })
 export class EmailListComponent implements OnChanges {
 
-  @Input() emails: any = [];
-  @Output() selectedEmail = new EventEmitter<any>();
-  selected: any
-
+  @Input() emails: any = []; // Lista de e-mails recebidos como entrada para o componente
+  @Output() selectedEmail = new EventEmitter<any>(); // Evento emitido quando um e-mail é selecionado
+  selected: any; // E-mail selecionado atualmente
 
   ngOnChanges(changes: SimpleChanges): void {
-    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-    //Add '${implements OnChanges}' to the class.
-    this.emails = this.emails;
-    
-  }
   
-  selectEmail(email: any) {
-    this.selectedEmail.emit(email);
-    this.selected = email
+    this.emails = this.emails; // Atualiza a lista de e-mails local com a lista de e-mails recebida
   }
 
+  /**
+   * Seleciona um e-mail e emite o evento 'selectedEmail' com o e-mail selecionado.
+   * @param email O e-mail selecionado.
+   */
+  selectEmail(email: any) {
+    this.selectedEmail.emit(email); // Emite o evento 'selectedEmail' com o e-mail selecionado como argumento
+    this.selected = email; // Atualiza o e-mail selecionado atualmente
+  }
 }
