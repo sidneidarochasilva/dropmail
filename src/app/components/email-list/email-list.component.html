@@ -1,0 +1,10 @@
+<mat-selection-list #shoes [multiple]="false">
+  <mat-list-item  *ngFor="let email of emails" 
+  (click)="selectEmail(email)"
+  [ngClass]="{ 'selected': email === selected }"
+  >
+   
+    <div matListItemTitle>{{email.headerSubject}}</div>
+    <div matListItemLine>De: {{email.fromAddr}}</div>
+  </mat-list-item>
+</mat-selection-list>

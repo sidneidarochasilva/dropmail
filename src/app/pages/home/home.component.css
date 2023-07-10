@@ -1,0 +1,24 @@
+.example-container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #55555580;
+}
+.ng-star-inserted{
+  padding:10px
+}
+.slide-toggle{
+  width:100%;
+  justify-content: flex-end;
+  display: flex;
+  
+}
+
+.slide-toggle span{
+  color: #fff;
+}
+
+@media only screen and (max-width: 800px) {
+  .example-container {
+    display: none;
+  }
+}

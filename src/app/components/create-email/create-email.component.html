@@ -1,0 +1,24 @@
+<div class="main">
+  <div *ngIf="error">
+    <p>Error: {{ error }}</p>
+  </div>
+
+  <form class="form" [formGroup]="searchForm">
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Seu email temporário</mat-label>
+      <input matInput readonly formControlName="tempEmail" value="tempEmail" #copyValue />
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="copy(copyValue)" >COPY</button>
+  </form>
+  <div class="progress-container">
+    <span>Autorefresh in</span>
+    <mat-progress-spinner
+      class="spinner-progress"
+      [color]="color"
+      [mode]="mode"
+      [value]="(countdown / 15) * 100"
+    ></mat-progress-spinner>
+    <div class="countdown-text">{{ countdown }}</div>
+  </div>
+  
+</div>

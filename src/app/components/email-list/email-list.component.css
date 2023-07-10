@@ -1,0 +1,16 @@
+
+
+.example-container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #55555580;
+}
+
+.mdc-list-item.mdc-list-item--with-two-lines {
+  
+  height: 75px;
+}
+.selected {
+  background-color: lightgray;
+  font-weight: bold;
+}

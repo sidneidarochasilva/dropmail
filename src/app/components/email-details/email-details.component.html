@@ -1,0 +1,13 @@
+<div *ngIf="emailDetails" class="email-selected">
+  <h1>{{ emailDetails.headerSubject }}</h1>
+  <p>De:{{ emailDetails.fromAddr }}</p>
+  <mat-card >
+    <mat-card-content>  
+      <p>{{ emailDetails.text }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+  
+  <div class="no-email-selected" *ngIf="!emailDetails">
+    <p>Nenhum e-mail selecionado.</p>
+  </div>
