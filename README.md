@@ -42,3 +42,7 @@ Acesse a aplicação no navegador através do seguinte URL:
 
 https://dropmail-flax.vercel.app/?vercelToolbarCode=vROb5NnHMvHhzqj
 
+
+## LINK APRESENTAÇÃO DO PROJETO
+
+https://youtu.be/8lkxtUf-wqU
