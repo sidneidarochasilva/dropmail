@@ -1,8 +1,8 @@
 This is a challenge by [Coodesh](https://coodesh.com/)
 
-##Gerador de email temporário
+## Gerador de email temporário
 
-##Descrição
+## Descrição
 
 Sites e serviços online geralmente exigem um endereço de e-mail válido para registrar, acessar ou receber conteúdo protegido, etc. No entanto, o problema é que alguns desses sites podem usar nossos endereços de e-mail para enviar mensagens indesejadas. As pessoas não querem se preocupar mais com spam, propagandas no email, hackers e ataques de robôs.
 
@@ -11,7 +11,7 @@ Uma boa maneira de lidar com isso é usar um endereço de e-mail temporário se 
 O Gerador de email temporário é uma aplicação que permite aos usuários possam criar um email temporario.
 
 
-##Tecnologias Utilizadas
+## Tecnologias Utilizadas
  - Angular: Framework JavaScript para construção de aplicações web.
  - Apollo Angular: Biblioteca para integração do Apollo Client com Angular.
  - GraphQL: Linguagem de consulta e manipulação de dados.
@@ -20,7 +20,7 @@ O Gerador de email temporário é uma aplicação que permite aos usuários poss
  - Material Angulaar: Framework de design visual utilizado para componentes de interface do usuário.
 Instalação e Uso
 
-##Clone este repositório para o seu ambiente local.
+## Clone este repositório para o seu ambiente local.
 
 Certifique-se de ter o Node.js instalado em sua máquina.
 
@@ -38,7 +38,7 @@ Acesse a aplicação no navegador através do seguinte URL:
 
 
 
-DEPLOY VERCEL:
+## DEPLOY VERCEL:
 
 https://dropmail-flax.vercel.app/?vercelToolbarCode=vROb5NnHMvHhzqj
 
