@@ -1,3 +1,5 @@
+This is a challenge by [Coodesh](https://coodesh.com/)
+
 ##Gerador de email temporário
 
 ##Descrição
@@ -33,4 +35,10 @@ Após a conclusão da instalação, execute o seguinte comando para iniciar o se
 Acesse a aplicação no navegador através do seguinte URL:
  http://localhost:4200
 
+
+
+
+DEPLOY VERCEL:
+
+https://dropmail-flax.vercel.app/?vercelToolbarCode=vROb5NnHMvHhzqj
 
