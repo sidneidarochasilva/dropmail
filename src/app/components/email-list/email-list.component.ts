@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { IEmail } from 'src/app/interfaces/IEmail';
 
 @Component({
   selector: 'app-email-list',
@@ -20,7 +21,7 @@ export class EmailListComponent implements OnChanges {
    * Seleciona um e-mail e emite o evento 'selectedEmail' com o e-mail selecionado.
    * @param email O e-mail selecionado.
    */
-  selectEmail(email: any) {
+  selectEmail(email: IEmail) {
     this.selectedEmail.emit(email); // Emite o evento 'selectedEmail' com o e-mail selecionado como argumento
     this.selected = email; // Atualiza o e-mail selecionado atualmente
   }

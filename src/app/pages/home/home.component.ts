@@ -1,4 +1,5 @@
 import { Component, Renderer2 } from '@angular/core';
+import { IEmail } from 'src/app/interfaces/IEmail';
 
 @Component({
   selector: 'app-home',
@@ -8,15 +9,15 @@ import { Component, Renderer2 } from '@angular/core';
 export class HomeComponent {
   isNotification = Notification.permission !== 'granted' ? false : true;
   emails: any = [];
-  email: any;
+  email:any;
 
   constructor(private renderer: Renderer2) { }
-
+      
   /**
    * Método chamado quando um e-mail é selecionado.
    * @param email O e-mail selecionado.
    */
-  onSelectedEmail(email: any) {
+  onSelectedEmail(email: IEmail) {
     this.email = email;
   }
 
@@ -24,7 +25,7 @@ export class HomeComponent {
    * Método chamado quando a lista de e-mails da caixa de entrada é atualizada.
    * @param listInBox Objeto contendo a lista de e-mails da sessão.
    */
-  onListInbox(listInBox: any) {
+  onListInbox(listInBox: IEmail) {
     if (this.emails.length < listInBox.session.mails.length) {
       this.showNotification();
     }
